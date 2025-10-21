@@ -13,7 +13,6 @@ class ThirdActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContentView(R.layout.activity_third)
-        
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.linear2)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
