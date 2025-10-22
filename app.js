@@ -1,12 +1,13 @@
 const express = require('express');
 const cors = require('cors');
+require('dotenv').config();
 
 const authRoutes = require('./routes/authRoutes');
 const languageRoutes = require('./routes/languageRoutes');
 
 const app = express();
-const PORT = 3000;
-
+const PORT = process.env.PORT || 5000;
+const HOST = process.env.HOST || 'localhost';
 
 app.use(cors());
 app.use(express.json());    
@@ -18,6 +19,6 @@ app.get('/', (req, res) => {
   res.send('Mobile API is running');
 });
 
-app.listen(PORT, () =>
-  console.log(`API server running at http://localhost:${PORT}`)
+app.listen(PORT,HOST, () =>
+  console.log(`API server running at http://${HOST}:${PORT}`)
 );
