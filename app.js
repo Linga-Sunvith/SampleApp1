@@ -7,7 +7,7 @@ const languageRoutes = require('./routes/languageRoutes');
 
 const app = express();
 const PORT = process.env.PORT || 5000;
-const HOST = process.env.HOSTT || '0.0.0.0';
+const HOST = process.env.HOST || 'localhost';
 
 app.use(cors({ origin: '*' }));
 app.use(express.json());    
