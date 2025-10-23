@@ -2,7 +2,7 @@ package com.techmanina.sampleapp
 
 import org.intellij.lang.annotations.Language
 
-data class Models (
+data class Users (
     val username: String,
     val password : String
 )
